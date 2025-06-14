@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildTrails - Adventure Awaits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-gray-300">    <!-- Navigation -->
+    <!-- Navigation -->
+<nav class="fixed w-full z-50 bg-transparent transition-colors duration-300" id="navbar">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-orange-400 flex items-center">
+                <i class="fas fa-mountain mr-2"></i> WildTrails
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-white hover:text-orange-400 transition">Home</a>
+                <a href="destination.html" class="hover:text-orange-400 transition">Destinations</a>
+                <a href="activities.html" class="hover:text-orange-400 transition">Activities</a>
+                <a href="about.html" class="hover:text-orange-400 transition">About Us</a>
+                <a href="contact.html" class="hover:text-orange-400 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section with Image Background -->
+<section id="activities-hero" class="relative h-screen overflow-hidden">
+    <!-- Image Background -->
+    <img src="css/Adventure.avif" 
+         alt="Mountain adventure background"
+         class="absolute inset-0 w-full h-full object-cover">
+    
+    <!-- Pulsing orange circle (optional decorative element) -->
+    <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-24 h-24 bg-orange-400 rounded-full opacity-20 blur-xl animate-pulse"></div>
+    </div>
+    
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70"></div>
+    
+    <!-- Content -->
+    <div class="container mx-auto px-6 h-full flex items-center justify-center text-center relative z-10">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fadeIn drop-shadow-xl">Choose Your Next <span class="text-orange-400">Adventure</span></h1>
+            <p class="text-xl md:text-2xl mb-10 mx-auto text-gray-100 leading-relaxed">
+                Discover 100+ guided experiences from adrenaline-pumping extreme sports to peaceful nature encounters. 
+                All adventures include certified guides, top-tier safety equipment, and unforgettable memories.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="btn-explore px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-orange-400/30 transition-all">
+                    Explore Activities <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <button class="px-8 py-4 rounded-full font-bold text-lg border-2 border-white hover:bg-white hover:text-gray-900 transition-all">
+                    <i class="fas fa-calendar-alt mr-2"></i> Plan Your Trip
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Down arrow -->
+    <div class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
+        <a href="#activities-grid" class="text-white text-2xl hover:text-orange-400 transition-colors">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
+</section>
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stat-card bg-gray-800 p-6 rounded-xl text-center transition-all duration-300">
+                    <div class="text-4xl font-bold text-orange-400 mb-2">15+</div>
+                    <div class="text-gray-300">Years Experience</div>
+                </div>
+                <div class="stat-card bg-gray-800 p-6 rounded-xl text-center transition-all duration-300">
+                    <div class="text-4xl font-bold text-orange-400 mb-2">200+</div>
+                    <div class="text-gray-300">Destinations</div>
+                </div>
+                <div class="stat-card bg-gray-800 p-6 rounded-xl text-center transition-all duration-300">
+                    <div class="text-4xl font-bold text-orange-400 mb-2">10K+</div>
+                    <div class="text-gray-300">Happy Travelers</div>
+                </div>
+                <div class="stat-card bg-gray-800 p-6 rounded-xl text-center transition-all duration-300">
+                    <div class="text-4xl font-bold text-orange-400 mb-2">98%</div>
+                    <div class="text-gray-300">Safety Record</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="py-20 map-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Featured <span class="text-orange-400">Destinations</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-300">From the peaks of the Himalayas to the depths of the Amazon, discover our most sought-after adventure destinations.</p>
+            </div>
+            
+            <div class="flex flex-col items-center">
+                <!-- Route Visualization -->
+                <div class="flex flex-col items-center mb-12">
+                    <div class="route-dot rounded-full mb-2"></div>
+                    <div class="route-line mb-2"></div>
+                    <div class="route-dot rounded-full mb-2"></div>
+                    <div class="route-line mb-2"></div>
+                    <div class="route-dot rounded-full mb-2"></div>
+                    <div class="route-line mb-2"></div>
+                    <div class="route-dot rounded-full mb-2"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:glow">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?ixlib=rb-4.0.3" alt="Patagonia" class="w-full h-full object-cover activity-image">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Patagonia Trek</h3>
+                            <p class="text-gray-300 mb-4">Explore the rugged beauty of Torres del Paine and the Southern Ice Field.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-orange-400 font-bold">From $2,499</span>
+                                <button class="text-white hover:text-orange-400 transition-colors"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:glow">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1580250864656-cd501faa9c76?ixlib=rb-4.0.3" alt="Nepal" class="w-full h-full object-cover activity-image">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Everest Base Camp</h3>
+                            <p class="text-gray-300 mb-4">Journey to the foot of the world's highest mountain through Sherpa villages.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-orange-400 font-bold">From $3,199</span>
+                                <button class="text-white hover:text-orange-400 transition-colors"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:glow">
+                        <div class="h-64 overflow-hidden">
+                            <img src="css/AmazonExpedition.webp" alt="Amazon" class="w-full h-full object-cover activity-image">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Amazon Expedition</h3>
+                            <p class="text-gray-300 mb-4">Navigate the world's largest rainforest and encounter incredible biodiversity.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-orange-400 font-bold">From $1,899</span>
+                                <button class="text-white hover:text-orange-400 transition-colors"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mt-12 px-8 py-3 rounded-full border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white transition-all">View All Destinations</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activity Filters -->
+    <section class="py-8 bg-gray-800 sticky top-0 z-40 shadow-lg">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="filter-btn active group" data-filter="all">
+                    <i class="fas fa-globe mr-2 group-hover:rotate-12 transition-transform"></i> All Activities
+                </button>
+                <button class="filter-btn group" data-filter="water">
+                    <i class="fas fa-water mr-2 group-hover:animate-bounce"></i> Water Adventures
+                </button>
+                <button class="filter-btn group" data-filter="mountain">
+                    <i class="fas fa-mountain mr-2 group-hover:animate-pulse"></i> Mountain Treks
+                </button>
+                <button class="filter-btn group" data-filter="family">
+                    <i class="fas fa-child mr-2 group-hover:animate-bounce"></i> Family-Friendly
+                </button>
+                <button class="filter-btn group" data-filter="extreme">
+                    <i class="fas fa-bolt mr-2 group-hover:animate-pulse"></i> Extreme
+                </button>
+                <button class="filter-btn group" data-filter="wildlife">
+                    <i class="fas fa-paw mr-2 group-hover:rotate-12 transition-transform"></i> Wildlife
+                </button>
+                <button class="filter-btn group" data-filter="relaxing">
+                    <i class="fas fa-spa mr-2 group-hover:animate-pulse"></i> Relaxing
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Grid Section -->
+    <section id="activities-grid" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Adventure <span class="text-orange-400">Activities</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-300">Choose your adventure style - from thrilling climbs to serene wildlife watching.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="activity-card bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:glow group" data-category="mountain extreme">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-4.0.3" alt="Mountain Climbing" 
+                             class="w-full h-full object-cover activity-image group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-6 flex flex-col justify-end">
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-orange-400 text-xs font-bold px-3 py-1 rounded-full">Extreme</span>
+                                <span class="bg-gray-700 text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                                    <i class="fas fa-clock mr-1"></i> 6-8 hrs
+                                </span>
+                                <span class="bg-green-600 text-xs font-bold px-3 py-1 rounded-full">
+                                    <i class="fas fa-mountain mr-1"></i> Mountain
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Advanced Rock Climbing</h3>
+                            <p class="text-gray-300 mb-4 text-sm">Challenge yourself on sheer cliff faces with IFMGA-certified guides and top-tier safety equipment.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center text-sm mb-4">
+                            <div class="flex items-center space-x-4">
+                                <span class="flex items-center">
+                                    <i class="fas fa-gauge-high mr-1 text-orange-400"></i>
+                                    <span class="font-medium">Advanced</span>
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fas fa-user-group mr-1 text-orange-400"></i>
+                                    <span class="font-medium">16+ years</span>
+                                </span>
+                            </div>
+                            <span class="text-orange-400 font-bold">$189/person</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="flex-1 py-2 bg-gray-700 hover:bg-orange-400 transition-colors rounded-lg font-medium text-sm">
+                                View Details
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center bg-gray-700 hover:bg-orange-400 rounded-lg transition-colors">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:glow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-4.0.3" alt="Wildlife Safari" class="w-full h-full object-cover activity-image">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-full bg-orange-400 flex items-center justify-center mr-3">
+                                <i class="fas fa-binoculars text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Wildlife Safari</h3>
+                        </div>
+                        <p class="text-gray-300">Get up close with nature's most magnificent creatures responsibly.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:glow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534187886935-1e1236e856c3?ixlib=rb-4.0.3" alt="Kayaking" class="w-full h-full object-cover activity-image">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-full bg-orange-400 flex items-center justify-center mr-3">
+                                <i class="fas fa-water text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Kayaking</h3>
+                        </div>
+                        <p class="text-gray-300">Paddle through pristine waters and hidden coves with our experts.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:glow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1501554728187-ce583db33af7?ixlib=rb-4.0.3" alt="Cultural Tours" class="w-full h-full object-cover activity-image">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-full bg-orange-400 flex items-center justify-center mr-3">
+                                <i class="fas fa-globe-americas text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Cultural Tours</h3>
+                        </div>
+                        <p class="text-gray-300">Immerse yourself in local traditions and authentic experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wildlife Section -->
+    <section id="wildlife" class="py-20 wildlife-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Wildlife <span class="text-orange-400">Encounters</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-300">Our ethical wildlife tours prioritize animal welfare and conservation.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="wildlife-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-4.0.3" alt="Tiger" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold">Bengal Tigers</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Spot these majestic predators in India's Ranthambore National Park with our expert trackers.</p>
+                    <div class="flex items-center text-sm text-orange-400">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>Best Season: Nov-Apr</span>
+                    </div>
+                </div>
+                
+                <div class="wildlife-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?ixlib=rb-4.0.3" alt="Gorilla" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold">Mountain Gorillas</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Trek through Rwanda's misty forests for a life-changing encounter with these gentle giants.</p>
+                    <div class="flex items-center text-sm text-orange-400">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>Best Season: Jun-Sep</span>
+                    </div>
+                </div>
+                
+                <div class="wildlife-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?ixlib=rb-4.0.3" alt="Penguin" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold">Emperor Penguins</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Witness the incredible lifecycle of Antarctica's most iconic residents.</p>
+                    <div class="flex items-center text-sm text-orange-400">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>Best Season: Nov-Dec</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="mb-6 text-gray-300">We partner with conservation organizations to ensure our tours support wildlife protection.</p>
+                <button class="px-8 py-3 rounded-full bg-orange-400 hover:bg-orange-500 transition-colors font-bold">Learn About Our Conservation Efforts</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planning Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Plan Your <span class="text-orange-400">Adventure Week</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-300">Mix and match activities to create your perfect itinerary.</p>
+            </div>
+
+            <div class="bg-gray-800 rounded-xl p-6 mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-7 gap-4 text-center">
+                    <div class="font-bold py-2">Day</div>
+                    <div class="font-bold py-2">Morning</div>
+                    <div class="font-bold py-2">Afternoon</div>
+                    <div class="font-bold py-2">Evening</div>
+                    <div class="font-bold py-2">Duration</div>
+                    <div class="font-bold py-2">Difficulty</div>
+                    <div class="font-bold py-2">Add</div>
+
+                    <!-- Sample itinerary row -->
+                    <div class="py-3 border-b border-gray-700">Monday</div>
+                    <div class="py-3 border-b border-gray-700">Hiking</div>
+                    <div class="py-3 border-b border-gray-700">Kayaking</div>
+                    <div class="py-3 border-b border-gray-700">Stargazing</div>
+                    <div class="py-3 border-b border-gray-700">8 hours</div>
+                    <div class="py-3 border-b border-gray-700">Moderate</div>
+                    <div class="py-3 border-b border-gray-700">
+                        <button class="text-orange-400 hover:text-white">
+                            <i class="fas fa-plus-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-6">Ready to Create Your Dream Adventure?</h3>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="btn-explore px-8 py-4 rounded-full font-bold text-lg">
+                        <i class="fas fa-calendar-check mr-2"></i>Build Custom Itinerary
+                    </button>
+                    <button class="px-8 py-4 rounded-full font-bold text-lg border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white transition-all">
+                        <i class="fas fa-headset mr-2"></i>Chat with a Guide
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hiker-section py-32 flex items-center parallax">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto bg-gray-900/80 backdrop-blur-sm p-12 rounded-xl">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Ready for Your <span class="text-orange-400">Next Adventure</span>?</h2>
+                <p class="text-xl mb-10 text-gray-100 leading-relaxed">
+                    Let our adventure specialists craft your perfect itinerary or answer any questions you have about our experiences.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="btn-explore px-10 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-orange-400/30 transition-all">
+                        <i class="fas fa-calendar-check mr-2"></i> Plan My Trip
+                    </button>
+                    <button class="px-10 py-4 rounded-full font-bold text-lg border-2 border-white hover:bg-white hover:text-gray-900 transition-all">
+                        <i class="fas fa-headset mr-2"></i> Chat with a Guide
+                    </button>
+                </div>
+                <div class="mt-8 flex items-center justify-center space-x-4">
+                    <div class="flex -space-x-2">
+                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Guide 1">
+                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Guide 2">
+                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Guide 3">
+                    </div>
+                    <span class="text-sm text-gray-300">Our expert guides are available 24/7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Traveler <span class="text-orange-400">Stories</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-300">Don't just take our word for it - hear from adventurers who've been there.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-800 p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah M.</h4>
+                            <div class="flex text-orange-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"The Everest Base Camp trek was the most challenging and rewarding experience of my life. Our guide was incredibly knowledgeable and made sure we were safe at every step."</p>
+                </div>
+                
+                <div class="testimonial-card bg-gray-800 p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">James T.</h4>
+                            <div class="flex text-orange-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"The bioluminescent kayak tour was absolutely magical. Our guide knew all the best spots and shared fascinating facts about the ecosystem."</p>
+                </div>
+                
+                <div class="testimonial-card bg-gray-800 p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Priya K.</h4>
+                            <div class="flex text-orange-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"WildTrails helped me plan the perfect solo adventure. I felt safe and supported the entire time while still getting an authentic experience."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section pt-20 pb-10 px-4 text-white">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-mountain mr-2"></i> WildTrails
+                    </h3>
+                    <p class="mb-6">Guiding unforgettable wilderness adventures since 2005. Our mission is to connect people with nature responsibly.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-orange-400 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-orange-400 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-orange-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-orange-400 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 uppercase tracking-wider">Explore</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-orange-400 transition">Adventure Tours</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">National Parks</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Wilderness Trails</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Guided Expeditions</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Seasonal Activities</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 uppercase tracking-wider">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-orange-400 transition">Trip Planning</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Safety Guidelines</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Pack Checklists</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Wildlife Viewing Tips</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Leave No Trace</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 uppercase tracking-wider">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-400"></i>
+                            <span>123 Wilderness Way, Mountain City, MC 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-orange-400"></i>
+                            <span>(800) 555-ADVN (2386)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-orange-400"></i>
+                            <span>adventures@wildtrails.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 WildTrails Adventures. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-orange-400 transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-orange-400 transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-orange-400 transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="js/main.js"></script>
+
+</body>
+</html>
