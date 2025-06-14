@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | WildTrails Adventure Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-hero {
+            background-position: center;
+            background-size: cover;
+        }
+        .glow {
+            box-shadow: 0 0 15px rgba(251, 146, 60, 0.1);
+        }
+        .glow:hover {
+            box-shadow: 0 0 25px rgba(251, 146, 60, 0.2);
+        }
+        .route-line {
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(to bottom, #3b82f6, #f59e0b);
+        }
+        .route-dot {
+            width: 12px;
+            height: 12px;
+            background: #f59e0b;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body class="text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-transparent transition-colors duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-bold text-orange-400 flex items-center">
+                    <i class="fas fa-mountain mr-2"></i> WildTrails
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-orange-400 transition">Home</a>
+                    <a href="destination.html" class="hover:text-orange-400 transition">Destinations</a>
+                    <a href="activities.html" class="hover:text-orange-400 transition">Activities</a>
+                    <a href="about.html" class="hover:text-orange-400 transition">About Us</a>
+                    <a href="contact.html" class="text-orange-400 transition">Contact</a>
+                </div>
+                <button class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero flex items-center justify-center text-center relative overflow-hidden min-h-screen">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70">
+            <img src="css/MountainAdventureBackground.jpg" 
+                alt="Mountain adventure background"
+                class="absolute inset-0 w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-6 z-10 py-32" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+                Ready for Your Next <span class="text-orange-400">Adventure</span>?
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-100">
+                Our adventure specialists are standing by to help plan your perfect trip
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact-form" class="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition duration-300 transform hover:scale-105">
+                    Contact Us Now
+                </a>
+                <a href="tel:+18005551234" class="px-8 py-4 border-2 border-white hover:border-orange-400 hover:text-orange-400 font-semibold rounded-full transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-phone mr-2"></i> Call Now
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#contact-form" class="text-white hover:text-orange-400 transition">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="py-20 px-4 bg-gray-900" id="contact-form">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg glow hover:shadow-orange-400/20 transition-all">
+                        <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" 
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-orange-400 focus:ring-1 focus:ring-orange-400 outline-none transition"
+                                    required aria-required="true">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-orange-400 focus:ring-1 focus:ring-orange-400 outline-none transition"
+                                    required aria-required="true">
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-300 mb-1">Subject</label>
+                                <input type="text" id="subject" name="subject"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-orange-400 focus:ring-1 focus:ring-orange-400 outline-none transition"
+                                    required aria-required="true">
+                            </div>
+
+                            <div>
+                                <label for="inquiry" class="block text-sm font-medium text-gray-300 mb-1">Inquiry Type</label>
+                                <select id="inquiry" name="inquiry"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-orange-400 focus:ring-1 focus:ring-orange-400 outline-none transition"
+                                    required aria-required="true">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="booking">Booking Inquiry</option>
+                                    <option value="custom">Custom Trip Request</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="general">General Question</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Your Message</label>
+                                <textarea id="message" name="message" rows="5"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-orange-400 focus:ring-1 focus:ring-orange-400 outline-none transition"
+                                    required aria-required="true"></textarea>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input type="checkbox" id="newsletter" name="newsletter"
+                                    class="h-4 w-4 text-orange-400 rounded bg-gray-700 border-gray-600 focus:ring-orange-400">
+                                <label for="newsletter" class="ml-2 text-sm text-gray-300">Sign up for our adventure newsletter</label>
+                            </div>
+
+                            <button type="submit"
+                                class="btn-primary text-white font-semibold px-8 py-3 rounded-lg w-full bg-orange-500 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-400/30 transition-all transform hover:-translate-y-0.5">
+                                Send Message <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg glow hover:shadow-orange-400/20 transition-all">
+                        <h2 class="text-2xl font-bold mb-6">Quick Contact</h2>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start hover:bg-gray-700/50 p-3 rounded-lg transition">
+                                <div class="bg-gray-700 p-3 rounded-full mr-4 text-orange-400">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Email Us</h3>
+                                    <a href="mailto:hello@wildtrails.com"
+                                        class="text-gray-300 hover:text-orange-400 transition">hello@wildtrails.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start hover:bg-gray-700/50 p-3 rounded-lg transition">
+                                <div class="bg-gray-700 p-3 rounded-full mr-4 text-orange-400">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Call Us</h3>
+                                    <a href="tel:+18005551234"
+                                        class="text-gray-300 hover:text-orange-400 transition">1-800-555-1234</a>
+                                    <p class="text-sm text-gray-400 mt-1">Mon-Fri: 8am-6pm (EST)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start hover:bg-gray-700/50 p-3 rounded-lg transition">
+                                <div class="bg-gray-700 p-3 rounded-full mr-4 text-orange-400">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Office Hours</h3>
+                                    <p class="text-gray-300">Monday - Friday: 8am - 6pm EST</p>
+                                    <p class="text-gray-300">Saturday: 9am - 4pm EST</p>
+                                    <p class="text-gray-300">Sunday: Closed</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start hover:bg-gray-700/50 p-3 rounded-lg transition">
+                                <div class="bg-gray-700 p-3 rounded-full mr-4 text-orange-400">
+                                    <i class="fas fa-headset text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">24/7 Emergency</h3>
+                                    <p class="text-gray-400">For current travelers only</p>
+                                    <a href="tel:+18005554321" class="text-orange-400 font-medium hover:text-orange-300">1-800-555-4321</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10 pt-6 border-t border-gray-700">
+                            <h3 class="font-semibold mb-4">Connect With Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    class="bg-gray-700 p-3 rounded-full text-orange-400 hover:bg-orange-400 hover:text-white transition transform hover:-translate-y-1">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-gray-700 p-3 rounded-full text-orange-400 hover:bg-orange-400 hover:text-white transition transform hover:-translate-y-1">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-gray-700 p-3 rounded-full text-orange-400 hover:bg-orange-400 hover:text-white transition transform hover:-translate-y-1">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-gray-700 p-3 rounded-full text-orange-400 hover:bg-orange-400 hover:text-white transition transform hover:-translate-y-1">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Find Our <span class="text-orange-400">Basecamp</span></h2>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <div class="map-container glow aspect-video w-full rounded-xl overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209132933!2d-73.98887568459382!3d40.74844047932799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMTkuMyJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                            class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg h-full glow hover:shadow-orange-400/20 transition-all">
+                        <h3 class="text-2xl font-bold mb-4">WildTrails Headquarters</h3>
+                        <p class="text-gray-300 mb-6">123 Adventure Lane<br>Mountain View, CO 80521<br>United States</p>
+
+                        <h4 class="font-semibold mb-2">Regional Offices</h4>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start hover:bg-gray-700/50 p-2 rounded-lg transition">
+                                <i class="fas fa-map-marker-alt text-orange-400 mt-1 mr-2"></i>
+                                <span class="text-gray-300">45 Summit Road, Banff, AB, Canada</span>
+                            </li>
+                            <li class="flex items-start hover:bg-gray-700/50 p-2 rounded-lg transition">
+                                <i class="fas fa-map-marker-alt text-orange-400 mt-1 mr-2"></i>
+                                <span class="text-gray-300">8 Alpine Way, Queenstown, New Zealand</span>
+                            </li>
+                            <li class="flex items-start hover:bg-gray-700/50 p-2 rounded-lg transition">
+                                <i class="fas fa-map-marker-alt text-orange-400 mt-1 mr-2"></i>
+                                <span class="text-gray-300">22 Trailblazer St, Chamonix, France</span>
+                            </li>
+                        </ul>
+
+                        <div class="bg-gray-700 p-4 rounded-lg border border-gray-600">
+                            <h4 class="font-semibold mb-2 flex items-center">
+                                <i class="fas fa-info-circle text-orange-400 mr-2"></i>
+                                Visiting Our Office?
+                            </h4>
+                            <p class="text-gray-300">Please call ahead to schedule an appointment. Our team is often out
+                                in the field leading adventures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Before You <span class="text-orange-400">Reach Out</span>
+            </h2>
+
+            <div class="space-y-4">
+                <div class="border border-gray-700 rounded-lg overflow-hidden glow hover:shadow-orange-400/20 transition-all">
+                    <button
+                        class="faq-toggle w-full text-left p-6 bg-gray-800 hover:bg-gray-700 transition flex justify-between items-center rounded-lg">
+                        <span class="font-semibold">How soon can I expect a response?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content p-6 hidden bg-gray-800">
+                        <p class="text-gray-300">We typically respond within 24-48 hours during business days. During
+                            peak season (May-September), response times may be slightly longer. For urgent inquiries,
+                            please call our office directly.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 rounded-lg overflow-hidden glow hover:shadow-orange-400/20 transition-all">
+                    <button
+                        class="faq-toggle w-full text-left p-6 bg-gray-800 hover:bg-gray-700 transition flex justify-between items-center rounded-lg">
+                        <span class="font-semibold">What information should I include in my message?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content p-6 hidden bg-gray-800">
+                        <p class="text-gray-300">Please include your preferred travel dates, group size, any specific
+                            activities you're interested in, and your adventure experience level. The more details you
+                            provide, the better we can tailor our response to your needs.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 rounded-lg overflow-hidden glow hover:shadow-orange-400/20 transition-all">
+                    <button
+                        class="faq-toggle w-full text-left p-6 bg-gray-800 hover:bg-gray-700 transition flex justify-between items-center rounded-lg">
+                        <span class="font-semibold">Do you offer custom adventure itineraries?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content p-6 hidden bg-gray-800">
+                        <p class="text-gray-300">Absolutely! Our adventure specialists excel at creating custom
+                            itineraries. Whether you're planning a family trip, corporate retreat, or solo expedition,
+                            we'll design an adventure that matches your interests, fitness level, and budget.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 rounded-lg overflow-hidden glow hover:shadow-orange-400/20 transition-all">
+                    <button
+                        class="faq-toggle w-full text-left p-6 bg-gray-800 hover:bg-gray-700 transition flex justify-between items-center rounded-lg">
+                        <span class="font-semibold">What's your cancellation policy?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content p-6 hidden bg-gray-800">
+                        <p class="text-gray-300">We understand plans change. Cancellations made 30+ days before
+                            departure receive a full refund. 15-29 days: 50% refund. Less than 15 days: no refund but
+                            may apply 75% of payment to future trip within 12 months. We strongly recommend travel
+                            insurance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-4 bg-gradient-to-br from-gray-900 to-gray-800 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Plan Something <span
+                    class="text-orange-400">Amazing</span></h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-300">Your next great adventure starts with a simple
+                hello. We're here to make your travel dreams a reality.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+18005551234"
+                    class="bg-orange-400 text-white font-semibold px-8 py-4 rounded-lg hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-400/30 transition-all transform hover:-translate-y-0.5">
+                    <i class="fas fa-phone mr-2"></i> Call Now: 1-800-555-1234
+                </a>
+                <a href="activities.html"
+                    class="bg-transparent text-white font-semibold px-8 py-4 rounded-lg border-2 border-white hover:bg-white hover:text-gray-900 transition-all transform hover:-translate-y-0.5">
+                    <i class="fas fa-calendar-alt mr-2"></i> View Upcoming Trips
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section pt-20 pb-10 px-4 text-white bg-gray-900">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-mountain mr-2 text-orange-400"></i> WildTrails
+                    </h3>
+                    <p class="mb-6">Guiding unforgettable wilderness adventures since 2005. Our mission is to connect people with nature responsibly.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-orange-400 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-orange-400 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-orange-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-orange-400 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 uppercase tracking-wider">Explore</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-orange-400 transition">Adventure Tours</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">National Parks</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Wilderness Trails</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Guided Expeditions</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Seasonal Activities</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 uppercase tracking-wider">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-orange-400 transition">Trip Planning</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Safety Guidelines</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Pack Checklists</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Wildlife Viewing Tips</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Leave No Trace</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 uppercase tracking-wider">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-400"></i>
+                            <span>123 Wilderness Way, Mountain City, MC 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-orange-400"></i>
+                            <span>(800) 555-ADVN (2386)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-orange-400"></i>
+                            <span>adventures@wildtrails.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 WildTrails Adventures. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-orange-400 transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-orange-400 transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-orange-400 transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
